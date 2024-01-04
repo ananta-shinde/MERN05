@@ -1,0 +1,15 @@
+  /* by tag name */
+  div,h1 {
+    background-color: brown;
+    color: white;
+}
+
+/* by class */
+.xyz {
+ background-color: pink;
+}
+
+/* by id */
+#vip{
+background-color: aquamarine;
+}

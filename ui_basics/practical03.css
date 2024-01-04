@@ -1,0 +1,49 @@
+/* select all */
+*{
+    font-size: 20px;
+}
+
+/* select All by type */
+div {
+    color: brown;
+}
+
+/* by id attribute */
+#demo{
+    color: blueviolet;
+}
+
+#demo:hover{
+    color: red;
+}
+
+#demo:last-child {
+    background-color: red;
+}
+
+/* by class attribute */
+.democlass{
+     color: coral;
+}
+
+/* by custom attribute */
+div[demoatte]{
+    color: darkgreen;
+}
+
+/* by custom attribute containing a string */
+div[demoatte*= "india"]
+{
+    color: darkmagenta;
+}
+
+/* by custom attribute ending with string */
+div[demoatte$= "country"]
+{
+    color: red;
+}
+
+/* & selector  :  nested selection */
+.parent .child {
+    background-color: aquamarine;
+}

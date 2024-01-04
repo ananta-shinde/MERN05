@@ -1,0 +1,33 @@
+
+
+.first-section{
+    height: 500px;
+    background-color: aquamarine;
+}
+.second-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    background-color: cadetblue;
+}
+
+.square{
+    display: inline-block;
+    width:150px;
+    height:150px;
+    background-color: black;
+}
+
+.normal-square{
+    width:150px;
+    height:150px;
+    background-color: black;
+}
+
+.second-section h1{
+    color: white;
+    text-align: center;
+}
+

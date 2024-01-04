@@ -1,0 +1,33 @@
+
+.container{
+    /* set container as flexbox */
+    display: flex;
+    /* changes axis and box-direction */
+    flex-direction: row;
+    /* main axis */
+    justify-content: flex-start;
+    /* cross axis */
+    align-items: center;
+    /* changes wraping method */
+    flex-wrap: wrap;
+    /* aligning space between items on cross axis */
+    align-content:center;
+    
+    height: 500px;
+    background-color: blanchedalmond;
+}
+
+.item{
+    
+    height: 150px;
+    width:150px;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    border: 2px solid black;
+    /* margin: 5px; */
+}
+
+.item1{
+     background-color: blueviolet;
+}

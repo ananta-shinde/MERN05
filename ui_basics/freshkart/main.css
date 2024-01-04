@@ -1,0 +1,198 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin: 20px 0;
+    font-size: 3.5rem;
+}
+
+h3{
+    margin: 20px 0;
+    font-size: 2.5rem;
+}
+
+h4{
+    margin: 15px 0;
+    font-size: 2rem;
+}
+
+.text-intro{
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+.fs-1 {
+    font-size: 1rem;
+}
+
+.fs-2{
+    font-size: 1.2rem;
+}
+.fs-4{
+    font-size: 1.5rem;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.text-lighter{
+    font-weight: 500;
+}
+
+.text-muted{
+   color:lightslategray ;
+}
+
+.container{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.justify-evenly{
+    justify-content: space-evenly;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.bg-light{
+   background-color: lightgrey;
+}
+.bg-success{
+   background-color: lightseagreen;
+}
+
+.p-1{
+    padding: 2px;
+}
+.p-2{
+    padding: 4px;
+}
+.p-3{
+    padding: 8px;
+}
+.p-4{
+    padding: 16px;
+}
+
+.pt-4{
+    padding-top: 16px;
+}
+
+.pb-4{
+    padding-bottom: 16px;
+}
+
+.py-4{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+#navbar{
+    border-bottom: 1px solid lightgray;
+}
+
+.form-control{
+    width: 100%;
+    height: 2rem;
+}
+
+.btn{
+    margin:5px ;
+    border: 0;
+    border-radius: 5px;
+    padding: 1% 2%;
+    font-size: 1.2rem;
+}
+
+.btn-success{
+    background-color: green;
+    color: white;
+}
+.btn-dark{
+    background-color: black;
+    color: white;
+}
+
+.w-50{
+    width: 50%;
+}
+.w-25{
+    width: 25%;
+}
+.w-75{
+    width: 75%;
+}
+.w-100{
+    width: 100%;
+}
+
+.list-unstyled{
+    list-style-type: none;
+}
+
+#hero{  
+}
+
+.slider-item{
+   position: relative;
+   margin: 2% 0;
+   border-radius: 20px;
+   overflow: hidden;
+}
+
+.slider-item .caption{
+     position: absolute;
+     top:25%;
+     left: 10%;
+}
+
+.caption{
+    position: absolute;
+    top:25%;
+    left: 10%;
+}
+
+#categories{
+    
+}
+
+.card{
+    flex: 1;
+    padding: 2%;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    max-width: 18rem;
+    text-align: center;
+}
+
+.section-body{
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+}
+
+.banner{
+    min-height: 200px;
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    padding: 2%;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+}

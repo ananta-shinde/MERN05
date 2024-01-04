@@ -1,0 +1,32 @@
+
+header{
+    padding: 0 35px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    background-color: antiquewhite;
+}
+
+.menu-container ul{
+    width: 60%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    border: 0;
+    padding: 3%;
+    background-color: transparent;
+}
+
+.btn-primary{
+    background-color: green;
+    color: white;
+    border-radius: 50px;
+}
