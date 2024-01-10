@@ -1,0 +1,54 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    padding: 0.8rem 1.6rem;
+    border: 0;
+    font-size: 1rem;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.btn-primary{
+    background-color: cornflowerblue;
+    color: white;
+}
+.btn-secondary{
+    background-color: gray;
+}
+.btn-outline-secondary{
+    background-color: lightgray;
+    border: 1px solid gray;
+}
+
+.btn-outline-secondary:hover{
+    background-color: gray;
+}
+#hero{
+    height: 400px;
+    background-color: aquamarine;
+    text-align: center;
+}
+
+.container{
+    padding-top: 10%;
+}
+
+.d-flex{
+   display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
