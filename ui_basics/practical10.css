@@ -1,0 +1,28 @@
+
+section{
+    background-color: lightcyan;
+    height: 500px;
+    border: 1px solid 
+}
+
+.d-flex{
+    display: flex;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-around{
+    justify-content: space-around;
+}
+
+.item{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    border:1px solid
+}
