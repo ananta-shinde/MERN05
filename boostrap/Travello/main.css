@@ -1,0 +1,14 @@
+
+
+#hero-image{
+    height: 100vh;
+    background-image: url(https://wallpapercosmos.com/w/full/e/4/4/19811-3840x2160-desktop-4k-sunset-background-image.jpg);
+    background-size: cover;
+    background-position: top;
+     
+    
+}
+
+.bg-trans-white{
+    background-color: #f4f4f457;
+}
