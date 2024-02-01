@@ -19,8 +19,7 @@ var empTable = document.getElementById("emp-table")
 
 for(i=0;i<empDetails.length;i++)
 {
-    var tableRow = document.createElement("tr")
-     
+    var tableRow = document.createElement("tr") 
     var tableData = document.createElement("td")
     tableData.innerHTML = empDetails[i].firstName
     tableRow.appendChild(tableData)
@@ -31,6 +30,19 @@ for(i=0;i<empDetails.length;i++)
     tableData.innerHTML = empDetails[i].dept
     tableRow.appendChild(tableData)
     empTable.appendChild(tableRow)
+}
+
+var productTable  = document.getElementById("product-table")
+for(i=0;i<productDetails.length;i++)
+{
+    var prevData = productTable.innerHTML
+    productTable.innerHTML =prevData + `
+  <tr>
+     <td>${productDetails[i].Name}</td>
+     <td>${productDetails[i].price}</td>
+     <td>${productDetails[i].discount}</td>
+  </tr>
+`
 }
 
 
