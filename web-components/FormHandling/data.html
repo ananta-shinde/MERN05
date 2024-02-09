@@ -8,12 +8,21 @@
 <body>
     <div>
         <h1>Sunmitted Data</h1>
-        <p id="data"></p>
+        <div id="info">
+
+        </div>
     </div>
     <script>
           const data = new URLSearchParams(window.location.search)
-          console.log(window.location);
-          document.getElementById("data");
+          var info = document.getElementById("info");
+          info.innerHTML = `
+          <label>Full Name :</label>${data.get("firstName")+" "+data.get("middleName")+" "+data.get("lastName")}<br>
+          <label>email :</label> ${data.get("email")}<br>
+          <label>Qualification :</label> ${data.get("qualification")}<br>
+          <label>contact :</label> ${data.get("contact")}<br>
+          <label>dob :</label> ${data.get("dob")}<br>
+
+          `
     </script>
 </body>
 </html>
