@@ -1,50 +1,84 @@
 
-var empDetails = 
-[
-    {LastName:"Thomson",dept:"Civil",firstName:"John"},
-    {firstName:"Virat",LastName:"Thomson",dept:"Civil"},
-    {firstName:"Rahul",LastName:"Thomson",dept:"Civil"},
-    {firstName:"John",LastName:"Thomson",dept:"Civil"},
+var employee = "Ananta" // string
+employee = 22; // Number
+var temp = {}; // Object : JSON
+var temp = []; // Object : Array
+var isloggedIn = true; // boolean
+const marks = ["22",23,"ture",[1,2,5]];
+console.log(typeof(marks[0]));
+console.log(typeof(marks[1]));
+
+employee = {
+   name :"Ananta",
+   city:"Pune",
+   pincodes:["431001","431006"]
+}
+
+console.log(employee["city"])
+console.log(employee.name);
+console.log(employee.pincodes[0]);
+
+products = [
+    {
+        "id" : 1,
+        "name": "p1",
+        "price":2500,
+        "categories":["men","electronics"]
+    }, 
+    {
+        "id" : 2,
+        "name": "p2",
+        "price":6500,
+        "categories":[]
+    }, 
+    {
+        "id" : 3,
+        "name": "p3",
+        "price":4500,
+        "categories":[]
+    }, 
+    {
+        "id" : 4,
+        "name": "p4",
+        "price":6500,
+        "categories":[]
+    }, 
+    {
+        "id" : 5,
+        "name": "p5",
+        "price":6500,
+        "categories":[]
+    }, 
+]
+
+console.log(products[2].price)
+console.log(products[0].categories[1])
+
+var response = {
+    status:200,
+    products:[
+        {
+            "id" : 4,
+            "name": "p4",
+            "price":6500
+        }
+    ]
+}
+
+console.log(response.products[0])
+
+for(var i=0;i<products.length;i++)
+{
+    console.log(products[i].name +" "+ products[i].price)
+    for(var j=0;j<products[i].categories.length;j++)
+    {
+        console.log(products[i].categories[j])
+    }
     
-]
-var productDetails = 
-[
-    {Name:"Mobile",price:"10000",discount:"10%"},
-    {Name:"Mobile",price:"10000",discount:"10%"},
-    {Name:"Mobile",price:"10000",discount:"10%"},
-    {Name:"Mobile",price:"10000",discount:"10%"},
-]
-
-var empTable = document.getElementById("emp-table")
-
-for(i=0;i<empDetails.length;i++)
-{
-    var tableRow = document.createElement("tr") 
-    var tableData = document.createElement("td")
-    tableData.innerHTML = empDetails[i].firstName
-    tableRow.appendChild(tableData)
-    var tableData = document.createElement("td")
-    tableData.innerHTML = empDetails[i].LastName
-    tableRow.appendChild(tableData)
-    var tableData = document.createElement("td")
-    tableData.innerHTML = empDetails[i].dept
-    tableRow.appendChild(tableData)
-    empTable.appendChild(tableRow)
 }
 
-var productTable  = document.getElementById("product-table")
-for(i=0;i<productDetails.length;i++)
-{
-    var prevData = productTable.innerHTML
-    productTable.innerHTML =prevData + `
-  <tr>
-     <td>${productDetails[i].Name}</td>
-     <td>${productDetails[i].price}</td>
-     <td>${productDetails[i].discount}</td>
-  </tr>
-`
-}
+
 
 
  
-
+ 
