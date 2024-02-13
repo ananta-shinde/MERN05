@@ -1,81 +1,71 @@
 
-var employee = "Ananta" // string
-employee = 22; // Number
-var temp = {}; // Object : JSON
-var temp = []; // Object : Array
-var isloggedIn = true; // boolean
-const marks = ["22",23,"ture",[1,2,5]];
-console.log(typeof(marks[0]));
-console.log(typeof(marks[1]));
-
-employee = {
-   name :"Ananta",
-   city:"Pune",
-   pincodes:["431001","431006"]
+// single object : entity
+var user = {
+    id:1,
+    name1:"Ananta",
+    email:"demo@example.com"
 }
 
-console.log(employee["city"])
-console.log(employee.name);
-console.log(employee.pincodes[0]);
-
-products = [
+// array of object : collection entities
+var users = [
     {
-        "id" : 1,
-        "name": "p1",
-        "price":2500,
-        "categories":["men","electronics"]
-    }, 
+        id:1,
+        name:"Ananta",
+        email:"demo@example.com",
+        city:"Pune"
+    },
     {
-        "id" : 2,
-        "name": "p2",
-        "price":6500,
-        "categories":[]
-    }, 
+        id:2,
+        name:"Demo",
+        email:"demo@example.com",
+        city : "Pune"
+    },
     {
-        "id" : 3,
-        "name": "p3",
-        "price":4500,
-        "categories":[]
-    }, 
-    {
-        "id" : 4,
-        "name": "p4",
-        "price":6500,
-        "categories":[]
-    }, 
-    {
-        "id" : 5,
-        "name": "p5",
-        "price":6500,
-        "categories":[]
-    }, 
+        id:3,
+        name:"Ram",
+        email:"ram@example.com",
+        city : "Goa"
+    }
 ]
 
-console.log(products[2].price)
-console.log(products[0].categories[1])
-
-var response = {
-    status:200,
-    products:[
-        {
-            "id" : 4,
-            "name": "p4",
-            "price":6500
-        }
-    ]
-}
-
-console.log(response.products[0])
-
-for(var i=0;i<products.length;i++)
+var predicate = "Demo";
+for(var i=0;i<users.length;i++)
 {
-    console.log(products[i].name +" "+ products[i].price)
-    for(var j=0;j<products[i].categories.length;j++)
+    if(users[i].name != predicate)
     {
-        console.log(products[i].categories[j])
+        console.log(users[i])
     }
-    
+   
 }
+predicate = "Pune"
+for(var i=0;i<users.length;i++)
+{
+    if(users[i].city != predicate)
+    {
+        console.log(users[i])
+    }
+   
+}
+
+ 
+function filterUsers(key,value)
+{
+    console.log("executed");
+    for(var i=0;i<users.length;i++)
+    {
+        if(users[i][key] == value)
+        {
+            console.log(users[i])
+        }
+    
+    }
+}
+
+filterUsers("name","Ananta");
+
+
+
+
 
 
 
