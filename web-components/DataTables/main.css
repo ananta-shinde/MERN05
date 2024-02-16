@@ -1,0 +1,9 @@
+
+.menubar li{
+    margin: 1rem;
+    border-bottom: 1px solid wheat;
+}
+
+.menubar{
+    height: 100vh;
+}
