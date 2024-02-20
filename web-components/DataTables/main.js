@@ -48,7 +48,7 @@ var users =[
     {
       "user_id": "5840b954da0529cd293d76fe",
       "email": "a@a.com",
-      "name": "a@a.com",
+      "name": "John",
       "given_name": "Jane",
       "family_name": "Dough",
       "nickname": "a",
@@ -109,12 +109,26 @@ var rowStructure = `
 </td>
 </tr>`
 
+function getRowStructure(user)
+{
+    return  `
+    <tr>
+      <td>${user.user_id}</td>
+      <td>${user.name}</td>
+      <td>${user.email}</td>
+      <td>
+        <button class="btn btn-sm btn-info">edit</button>
+        <button class="btn btn-sm btn-danger">delete</button>
+    </td>
+    </tr>`;
+}
+
 function updateRowStructure()
 {
     let result= ""
-    for(i=0;i<5;i++)
+    for(i=0;i<users.length;i++)
     {
-        result =  result + rowStructure;
+        result =  result + getRowStructure(users[i]);
     }
     return result;
 }
