@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    height: 75vh;
+}
+
+.panel{
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    margin: 5px;
+    transition: flex 1s ease-in-out;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+/* .container :nth-child(2)
+{
+    flex: 5;
+} */
+
