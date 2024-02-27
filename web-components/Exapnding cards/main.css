@@ -9,7 +9,7 @@
     background-size: cover;
     border-radius: 20px;
     margin: 5px;
-    transition: flex 1s ease-in-out;
+    transition: flex 1s ease-in;
 }
 
 .panel.active{
