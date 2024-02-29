@@ -1,0 +1,60 @@
+
+.container{
+    background-color: #f0f0f0;
+
+}
+
+h1{
+    text-align: center;
+}
+
+.faq{
+    max-width: 50%;
+    margin: 10px auto;
+    padding: 20px;
+    border:2px solid black;
+    border-radius: 5px;
+    position: relative;
+}
+
+.faq .faq-text{
+    display: none;
+}
+
+.faq.active .faq-text{
+    display: block;
+}
+
+.faq-title{
+    font-weight: bold;
+}
+
+.faq.active{
+    background-color: lightgoldenrodyellow;
+}
+
+.faq-toggle{
+    position: absolute;
+    right:10px;
+    top:30%;
+    width:30px;
+    height: 30px;
+    background-color: gray;
+    color: white;
+    border-radius: 50%;
+    border:0
+}
+
+.faq .bi.bi-x-lg{
+    display: none;
+}
+.faq.active .bi.bi-x-lg{
+    display: block;
+}
+
+.faq.active .bi.bi-chevron-down{
+    display: none;
+}
+.faq .bi.bi-chevron-down{
+    display: block;
+}
