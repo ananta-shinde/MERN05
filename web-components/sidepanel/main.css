@@ -1,0 +1,58 @@
+
+.container{
+    padding: 0px;
+    position: relative;
+}
+
+i{
+    font-size: 25px;
+}
+
+.list{
+    list-style-type: none;
+}
+
+.list li{
+    font-size: 25px;
+}
+
+.btn{
+    background-color: transparent;
+    border:0;
+}
+
+.btn .bi.bi-x{
+    color: white;
+    position: absolute;
+    right:10px;
+    top:10px;
+}
+
+.side-nav{
+    background-color: black;
+    max-width: 300px;
+    color: white;
+    padding: 10px;
+    position: relative;
+    display: none;
+    transform: translateX(-200%);
+    height: 100vh;
+    transition: transform 2s ease-in-out;
+}
+
+.btn .bi.bi-list{
+    color: black;
+    font-size: 30px;
+    position: absolute;
+    top:10px;
+    left: 20px;
+}
+
+.side-nav.show{
+    display: block;
+    transform: translateX(0);
+}
+
+.list li{
+    margin: 10px 0;
+}
