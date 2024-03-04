@@ -1,0 +1,19 @@
+
+.sub-menu{
+    display: none;
+    transition:  5s ease-in-out;
+}
+
+.main-menu.active .sub-menu{
+    display: block;
+}
+
+.main-menu{
+    position: relative;
+    width: 100%;
+}
+
+.main-menu i{
+    position: absolute;
+    right:20%
+}
