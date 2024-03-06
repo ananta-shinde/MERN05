@@ -43,7 +43,7 @@
             <div class="col-md-6 p-4"> 
                 <section id="add-product-form">
                     <h4 class=" mb-4">Add New Product</h4>
-                    <form class="border p-4 shadow">
+                    <div class="border p-4 shadow">
                         <div class="form-group">
                             <input type="text" name="" id="" class="form-control" placeholder="Product Name">
                         </div>
@@ -58,7 +58,8 @@
                                 <option>-- select category --</option>
                             </select>
                         </div>
-                    </form>
+                        <button class="btn-success" type="submit" onclick="addproduct(this)">Save</button>
+                    </div>
                 </section>
                 <section id="add-category-form">
                     <h4 class=" mb-4">Add New Category</h4>
@@ -75,6 +76,24 @@
                             <input type="text" name="" id="" class="form-control" placeholder="Brand Name">
                         </div>
                     </form>
+                </section>
+                <section id="view-product-container">
+                    <table class="table" id="product-table">
+                        <tr>
+                            <th>name</th>
+                            <th>price</th>
+                            <th>description</th>
+                            <th>category</th>
+                        </tr>
+                    </table>
+                </section>
+                <section id="view-categories-container">
+                    <table class="table" id="category-table">
+                        <tr>
+                            <th>name</th>
+                             
+                        </tr>
+                    </table>
                 </section>
             </div>
         </div>

@@ -32,7 +32,11 @@ form .form-group{
     margin: 10px 0;
 }
 
-#add-brand-form,#add-category-form,#add-product-form{
+#add-brand-form,#add-category-form,
+#add-product-form,#view-product-container,
+#view-categories-container{
     display: none;
 
 }
+
+ 
