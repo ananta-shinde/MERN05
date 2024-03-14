@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+h4{
+  color: orange;
+}
+
+.btn{
+  border: 0;
+}
+.btn-primary{
+    background-color: orange;
+}
+
+.btn-secondary{
+   background-color: crimson;
+}
