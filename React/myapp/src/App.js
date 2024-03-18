@@ -1,58 +1,35 @@
 
+import { useState } from 'react';
 import './App.css';
- 
-function AppBanner(props)
+
+function Counter(props)
 {
-  const myStyle = {
-    backgroundColor:"orange",
-    height : props.height,
-    textAlign : "center",
-    color:"white",
-    fontSize:"50px",
-    margin:"25px"
-  } 
-  return(
-    <div  style={myStyle}>
-        {props.text}
-    </div>
-  )
+  // let count = 0;
+  const [count,setCount] = useState(0);
+  function increment()
+  {
+      setCount(count+1);
+      console.log(count)
+  }
+
+  function decrement()
+  {
+      setCount(count-1);
+      console.log(count)
+  }
+   return(
+    <>
+    <input placeholder='initial count' value={count}/>
+    <button onClick={increment}>{props.btnIncText}</button>
+    <button onClick={decrement}>{props.btnDecText}</button>
+    </>
+   )
 }
-
-function AppList(){
-  const listitems = [
-    "item1", "item2","item3"
-  ]
-     return(
-      <ul>
-         {listitems.map(l=><li>{l}</li>)}
-      </ul>
-     )
-}
-
-function App() {
-   
-  const banners = [
-    {
-      title:"First Banner",
-      image_url : ""
-    },
-    {
-      title:"Second Banner",
-      image_url:""
-    },
-    {
-      title:"third Banner",
-      image_url : ""
-    }
-
-  ]
-
+function App() { 
   return (
     <>
-    <AppList/>
-      {banners.map(b=>(<AppBanner text={b.title}/>))}
-      <AppList/>
-     </>
+       <Counter btnIncText="increment" btnDecText="decrment"/>
+    </>
     
   );
 }
