@@ -1,18 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
-import Functionality01 from './Functionality01';
-import Functionality02 from './Functionality02';
-import Functionality03 from './Functionality03';
 import { useState } from 'react';
-function App() {
-  const [message,setMessage] = useState("Hello from App");
-  
-  
+
+
+
+function Comp01(props)
+{
+  const [userMessage,setUserMessage] = useState(props.message);
+  function handleChange(e)
+  {
+    setUserMessage(e.target.value)
+    console.log(e.target.value)
+  }
+  var name = ""
+  return(
+    <>
+    <input id="userInput" placeholder='Enter name' onChange={handleChange}/>
+    <button>Save</button>
+    <Comp02 message={userMessage}/>
+    </>
+  )
+}
+
+function Comp02(props)
+{
+  return(
+    <>
+     <h4>{props.message}</h4>
+     <p>list of names</p>
+     </>
+  )
+}
+function App() {  
   return (
     <>
-     <Functionality01 message={message}/>
-     <Functionality02 message={message}/>
-     <Functionality03 setMessage={setMessage}/>
+      <Comp01 message="Sample Message"/>
      </>
   );
 }
