@@ -1,40 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
-
-
-
-function Comp01(props)
-{
-  const [userMessage,setUserMessage] = useState(props.message);
-  function handleChange(e)
-  {
-    setUserMessage(e.target.value)
-    console.log(e.target.value)
-  }
-  var name = ""
-  return(
-    <>
-    <input id="userInput" placeholder='Enter name' onChange={handleChange}/>
-    <button>Save</button>
-    <Comp02 message={userMessage}/>
-    </>
-  )
-}
-
+  
 function Comp02(props)
 {
   return(
     <>
-     <h4>{props.message}</h4>
-     <p>list of names</p>
-     </>
+      <ul>
+        { props.data && props.data.map(d=>(<li>{d}</li>))  }
+      </ul>
+    </>
   )
 }
-function App() {  
+
+function Comp03()
+{
+  return(
+    <>
+      <input placeholder='enter name'/>
+      <button>Save</button>
+    </>
+  )
+}
+
+function Comp01(props)
+{
+     return(
+      <>
+        <Comp03/>
+        <Comp02 data={props.data}/>
+        <Comp02 data={props.data}/>
+      </>
+     )
+}
+function App() { 
+  var data = ["CSS","HTML","React","JS"]; 
   return (
     <>
-      <Comp01 message="Sample Message"/>
+       <Comp02 data={data}/>
+       <Comp01 />
      </>
   );
 }
