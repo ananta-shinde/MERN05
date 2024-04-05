@@ -17,9 +17,17 @@
 .product-grid{
     padding: 50px;
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
+   
    row-gap: 20px;
    text-align: center;
+}
+
+.grid-4{
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-3{
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .product-grid img{
