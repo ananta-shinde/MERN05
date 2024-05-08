@@ -1,8 +1,7 @@
 import { useState } from "react";
 import products from "../data.json"
 const ProductListGrid = ()=>{
-    const [gridClass,setGridClass] = useState('product-grid grid-3')
-    
+    const [gridClass,setGridClass] = useState('product-grid grid-3') 
     const handlechange = (e)=>{
            if(e.target.value == "3")
            {
@@ -13,7 +12,6 @@ const ProductListGrid = ()=>{
                 setGridClass('product-grid grid-4')
            }
     }
-
     return (
         <>
         <select onChange={handlechange}>
