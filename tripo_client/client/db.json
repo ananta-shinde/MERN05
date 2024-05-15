@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ananta"
+    },
+    {
+      "name": "Amit",
+      "email": "amit@demo.com",
+      "password": "123456789",
+      "id": 4
+    },
+    {
+      "name": "Amit",
+      "email": "amit@demo.com",
+      "password": "123456789",
+      "id": 5
+    },
+    {
+      "name": "Amit",
+      "email": "amit@demo.com",
+      "password": "123456789",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "name": "Amit",
+      "email": "amit@demo.com",
+      "password": "123456789",
+      "id": 1
+    }
+  ]
+}

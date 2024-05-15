@@ -1,16 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Login from './pages/Login';
-import SignUp from './pages/Signup';
-import { useState } from 'react';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import routerCollection from './routes';
+
 
 function App() {
-
-  const [isLoggedIn, setIsloggedIn] = useState("signup")
   return (
     <>
-    {isLoggedIn == "login" && <Login/>}
-    {isLoggedIn == "signup" && <SignUp setIsloggedIn={setIsloggedIn}/>}
+      <RouterProvider router={routerCollection}/>
     </>
   );
 }
