@@ -19,7 +19,7 @@ const routerCollection = createBrowserRouter(
         element:<Home/>
       },
       {
-        path:"/product/details",
+        path:"/product/:cid/:pid/details",
         element:<ProductDetails/>
       }
     ]

@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import routerCollection from './routes';
+import {createBrowserRouter,RouterProvider} from "react-router-dom"
 
 
 function App() {
