@@ -15,24 +15,43 @@
         {
             "id": "1",
             "name": "Google Pixel 6 Pro",
-            "data": {
-            "color": "Cloudy White",
-            "capacity": "128 GB"
-            }
+            "categoryId":1,
+            "price":80000
             },
             {
-            "id": "2",
+            "id": "1",
             "name": "Apple iPhone 12 Mini, 256GB, Blue",
-            "data": null
+            "categoryId":1,
+            "price":60000
             },
             {
             "id": "3",
-            "name": "Apple iPhone 12 Pro Max",
-            "data": {
-            "color": "Cloudy White",
-            "capacity GB": 512
-            }
-            }
+            "name": "Apple Macbook Max",
+            "categoryId":2,
+            "price":120000
+            
+            } ,
+            {
+                "id": "4",
+                "name": "Apple Macbook Mini",
+                "categoryId":2,
+                "price":120000
+                
+                } 
+    ],
+    "categories":[
+        {
+            "id":1,
+            "name":"mobile"
+        },
+        {
+            "id":2,
+            "name":"laptop"
+        },
+        {
+            "id":3,
+            "name":"taplet"
+        }
     ]
     
 }
