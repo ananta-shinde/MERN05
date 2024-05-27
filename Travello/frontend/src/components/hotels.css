@@ -1,0 +1,25 @@
+
+
+.hotel-hero{
+    background-image: url("https://png.pngtree.com/background/20210711/original/pngtree-paper-cut-wind-black-gold-overlay-background-picture-image_1151594.jpg");
+    min-height: 200px;
+    padding:5%;
+}
+
+.rooms-and-guest-form{
+    position: absolute;
+    top:40px;
+    z-index:1;
+    background-color: white;
+}
+
+
+.hotel-filter{
+    position: relative;
+    height: 250px;
+}
+.search-btn{
+   position: absolute;
+   top:85%;
+   left:45%;
+}
