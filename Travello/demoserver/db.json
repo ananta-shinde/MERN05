@@ -52,6 +52,68 @@
             "id":3,
             "name":"taplet"
         }
+    ],
+    "hotels":[
+        {
+            "id":1,
+            "name": "StayVista at Penthouse @ Mawi Summers",
+            "stdRating": 4,
+            "rent": 8000,
+            "dicount": 5,
+            "images":[
+                "https://r1imghtlak.mmtcdn.com/e8e8a88e-e6c6-4f05-ae46-2a714b16621b.jpg?&output-quality=75&downsize=520:350&crop=520:350;2,0&output-format=jpg&downsize=480:336&crop=480:336",
+                "https://r1imghtlak.mmtcdn.com/7d4fed46-2d99-402c-8838-d52fd1168134.jpg?downsize=252:160&crop=252:160",
+                "https://r1imghtlak.mmtcdn.com/ea6d1d9a-7eee-4705-9ca7-64604c7a885a.jpg"
+                ],
+            "noOfRooms":5,
+            "roomsAvailable":4,
+           "cityId":1
+
+        },
+        {
+            "id":2,
+            "name": "Nirvana Hill Resort",
+            "stdRating": 3,
+            "rent": 4500,
+            "dicount": 5,
+            "images":[
+                "https://r1imghtlak.mmtcdn.com/e8e8a88e-e6c6-4f05-ae46-2a714b16621b.jpg?&output-quality=75&downsize=520:350&crop=520:350;2,0&output-format=jpg&downsize=480:336&crop=480:336",
+                "https://r1imghtlak.mmtcdn.com/7d4fed46-2d99-402c-8838-d52fd1168134.jpg?downsize=252:160&crop=252:160",
+                "https://r1imghtlak.mmtcdn.com/ea6d1d9a-7eee-4705-9ca7-64604c7a885a.jpg"
+                ],
+            "noOfRooms":5,
+            "roomsAvailable":4,
+            "cityId":1
+
+        },
+        {
+            "id":3,
+            "name": "Raama International",
+            "stdRating": 5,
+            "rent": 16000,
+            "dicount": 5,
+            "images":[
+                "https://r1imghtlak.mmtcdn.com/e8e8a88e-e6c6-4f05-ae46-2a714b16621b.jpg?&output-quality=75&downsize=520:350&crop=520:350;2,0&output-format=jpg&downsize=480:336&crop=480:336",
+                "https://r1imghtlak.mmtcdn.com/7d4fed46-2d99-402c-8838-d52fd1168134.jpg?downsize=252:160&crop=252:160",
+                "https://r1imghtlak.mmtcdn.com/ea6d1d9a-7eee-4705-9ca7-64604c7a885a.jpg"
+                ],
+            "noOfRooms":5,
+            "roomsAvailable":4,
+            "cityId":2
+
+        }
+
+    ],
+
+    "cities":[
+        {
+            "id":1,
+            "name":"Goa"
+        },
+        {
+            "id":2,
+            "name":"Chennai"
+        }
     ]
     
 }

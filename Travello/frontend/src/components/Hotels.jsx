@@ -6,12 +6,12 @@ const Hotels = () => {
           <div className="container-fluid">
             <div className="row">
                 <div className="col hotel-hero">
-                    <form action="" className="position-relative">
+                    <form action="/hotel/list" className="position-relative">
                         <div className="card p-4">
                             <div className="row">
                             <div className="col-3">
                                 <label>City, Property Name Or Location</label>
-                                <select className="form-control">
+                                <select className="form-control" name="city">
                                     <option>Goa</option>
                                     <option>Mumbai</option>
                                     <option>Delhi</option>
@@ -19,32 +19,32 @@ const Hotels = () => {
                             </div>
                             <div className="col-2">
                                 <label>Check-In</label>
-                                <input className="form-control" type="date"/>
+                                <input className="form-control" type="date" name="checkInDate"/>
                             </div>
                             <div className="col-2">
                                 <label>Check-Out</label>
-                                <input className="form-control" type="date"/>
+                                <input className="form-control" type="date" name="checkOutDate"/>
                             </div>
                             <div className="col-3 position-relative">
                                  <label>Rooms & Guests</label>
                                 {showRoomsAndGuests && <div className="rooms-and-guest-form p-4">
                                     <div className="row">
                                         <label className="col-6">Rooms</label>
-                                        <select className="col-6">
+                                        <select className="col-6" name="noOfRooms">
                                             <option>01</option>
                                             <option>02</option>
                                             <option>03</option>
                                             <option>04</option>
                                         </select>
                                         <label className="col-6">Adults</label>
-                                        <select className="col-6">
+                                        <select className="col-6" name="noOfAdults">
                                             <option>01</option>
                                             <option>02</option>
                                             <option>03</option>
                                             <option>04</option>
                                         </select>
                                         <label className="col-6">Childs</label>
-                                        <select className="col-6">
+                                        <select className="col-6" name="noOfChilds">
                                             <option>01</option>
                                             <option>02</option>
                                             <option>03</option>
