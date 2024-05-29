@@ -1,7 +1,19 @@
+import { useEffect, useState } from "react";
 import "./hotels.css"
 
 const Hotels = () => {
-    var showRoomsAndGuests = true;
+
+    var showRoomsAndGuests = false;
+    const [cities,setCities] = useState([])
+    
+    useEffect(()=>{
+        fetch("http://localhost:5000/cities")
+        .then(res=>res.json())
+        .then(data=>{
+            setCities(data)
+        })
+    },[])
+
     return ( <>
           <div className="container-fluid">
             <div className="row">
@@ -11,10 +23,9 @@ const Hotels = () => {
                             <div className="row">
                             <div className="col-3">
                                 <label>City, Property Name Or Location</label>
-                                <select className="form-control" name="city">
-                                    <option>Goa</option>
-                                    <option>Mumbai</option>
-                                    <option>Delhi</option>
+                                <select className="form-control" name="cityId">
+                                    <option value={0}>-- select city --</option>
+                                    {cities.map(c=>(<option value={c.id}>{c.name}</option>))}
                                 </select>
                             </div>
                             <div className="col-2">

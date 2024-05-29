@@ -113,6 +113,32 @@
         {
             "id":2,
             "name":"Chennai"
+        },{
+            "id":3,
+            "name":"Pune"
+        }
+    ],
+
+    "rooms":[
+        {
+            "id":1,
+            "hotelId":1,
+            "type":"Delux AC Room"
+        },
+        {
+            "id":2,
+            "hotelId":1,
+            "type":"Standard AC Room"
+        },
+        {
+            "id":3,
+            "hotelId":2,
+            "type":"Delux AC Room"
+        },
+        {
+            "id":4,
+            "hotelId":2,
+            "type":"Standard AC Room"
         }
     ]
     
