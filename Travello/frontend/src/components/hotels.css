@@ -23,3 +23,19 @@
    top:85%;
    left:45%;
 }
+
+.thumbnail{
+    width: 100px;
+    margin: 0.5%;
+}
+
+.main-image{
+    width: 300px;
+    display: block;
+}
+
+.hotel-cards .btn {
+    position: absolute;
+    bottom: 0;
+    
+}

@@ -67,8 +67,11 @@
                 ],
             "noOfRooms":5,
             "roomsAvailable":4,
-           "cityId":1
-
+           "cityId":1,
+           "address":"1.5km from Bagga Beach, Panjim",
+           "facilities":[
+            "Free Parking area","Evehicle chargin point","restaurant"
+           ]
         },
         {
             "id":2,
@@ -83,7 +86,11 @@
                 ],
             "noOfRooms":5,
             "roomsAvailable":4,
-            "cityId":1
+            "cityId":1,
+            "address":"1.5km from Bagga Beach, Panjim",
+           "facilities":[
+            "Free Parking area","Evehicle chargin point","restaurant"
+           ]
 
         },
         {
@@ -99,7 +106,11 @@
                 ],
             "noOfRooms":5,
             "roomsAvailable":4,
-            "cityId":2
+            "cityId":2,
+            "address":"1.5km from Bagga Beach, Panjim",
+           "facilities":[
+            "Free Parking area","Evehicle chargin point","restaurant"
+           ]
 
         }
 
