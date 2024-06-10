@@ -6,6 +6,8 @@ import Home from './components/Home';
 import Cabs from './components/Cabs';
 import Hotels from './components/Hotels';
 import HotelListing from './components/HotelListing';
+import PostListing from './components/PostListing';
+import PostDetails from './components/PostDetails';
 
 const routers = createBrowserRouter([
   {
@@ -23,6 +25,14 @@ const routers = createBrowserRouter([
   {
     path:"/hotel/list",
     element:<HotelListing/>
+  },
+  {
+    path:"/posts",
+    element:<PostListing/>
+  },
+  {
+    path:"/posts/:postId",
+    element:<PostDetails/>
   }
 ])
 
