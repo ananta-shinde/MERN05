@@ -1,6 +1,6 @@
 // import express module
 const express = require("express")
-const appData = require("./data.json")
+const { getAllProducts, getProductById, searchProduct, getproductsByBrand } = require("./helpers/products")
 // create an app object
 const app = express()
 
@@ -9,14 +9,25 @@ app.get("/",(req,res)=>{
 })
 
 app.get("/products",(req,res)=>{
-    console.log(req.query)
-    console.log(req.params)
-    res.send(appData.products)
+    var result = undefined;
+    if(req.query.searchText)
+    {
+        console.log(req.query.searchText)
+        result = searchProduct(req.query.searchText);
+    }else{
+        result = getAllProducts();
+    }
+     res.send(result)
+})
+
+app.get("/products/brands/:brandName",(req,res)=>{
+    const result = getproductsByBrand(req.params.brandName)
+    res.send(result)
 })
 
 app.get("/products/:id",(req,res)=>{
-    
-    res.send(appData.products.find(p=>p.id==req.params.id))
+    const result =getProductById(req.params.id)
+    res.send(result)
 })
 
 
