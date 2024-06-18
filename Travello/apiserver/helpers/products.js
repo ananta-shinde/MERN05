@@ -19,3 +19,8 @@ exports.getproductsByBrand = (brandName) =>{
     return products
 }
 
+exports.createProduct = (product)=>{
+       data.products.push(product)
+       return product
+}
+
