@@ -2,6 +2,7 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 const { getAllProducts, getProductById, searchProduct, getproductsByBrand, createProduct } = require("./helpers/products")
+const { cityModel } = require("./db.config")
 // create an app object
 const app = express()
 
@@ -44,6 +45,26 @@ app.get("/products/:id",(req,res)=>{
     const result =getProductById(req.params.id)
     res.send(result)
 })
+
+app.post("/cities",(req,res)=>{
+    const newCity = new cityModel(req.body)
+    newCity.save()
+    res.send(newCity)
+})
+app.get("/cities",async(req,res)=>{
+    const cities = await cityModel.find({})
+    res.send(cities)
+})
+app.put("/cities/:id",async(req,res)=>{
+    const cities = await cityModel.findByIdAndUpdate(req.params.id,req.body )
+    res.send("city updated")
+})
+
+app.delete("/cities/:id",(req,res)=>{
+    const currentCity = cityModel.deleteOne({_id:req.params.id})
+    res.send("doct deleted")
+})
+
 
 //start app (server)
 app.listen(5000,()=>{console.log("server started")})
