@@ -1,70 +1,35 @@
-// import express module
 const express = require("express")
 const bodyParser = require("body-parser")
-const { getAllProducts, getProductById, searchProduct, getproductsByBrand, createProduct } = require("./helpers/products")
-const { cityModel } = require("./db.config")
-// create an app object
+const { userModel } = require("./db.config")
+const port  = 5000
 const app = express()
-
 app.use(bodyParser.json())
 
 app.get("/",(req,res)=>{
-      
+    console.log("reuqest received")
+    res.send("reuest completed")
 })
 
-app.get("/products",(req,res)=>{
-    var result = undefined;
-    if(req.query.searchText)
-    {
-        console.log(req.query.searchText)
-        result = searchProduct(req.query.searchText);
-    }else{
-        result = getAllProducts();
-    }
-     res.send(result)
+app.get("/users",async(req,res)=>{
+    const users = await userModel.find({})
+    res.send({users})
 })
-
-app.post("/products",(req,res)=>{
-    const result = createProduct(req.body)
-    res.send(result)
+app.get("/users/:id",async(req,res)=>{
+    const user = await userModel.findById(req.params.id)
+    res.send({user})
 })
-
-app.put("/products/:id",(req,res)=>{
-    res.send("data updated...")
+app.put("/users/:id",async(req,res)=>{
+    const user = await userModel.findByIdAndUpdate(req.params.id,req.body)
+    res.send({user})
 })
-app.delete("/products/:id",(req,res)=>{
-    res.send("data deleted...")
-})
-
-app.get("/products/brands/:brandName",(req,res)=>{
-    const result = getproductsByBrand(req.params.brandName)
-    res.send(result)
-})
-
-app.get("/products/:id",(req,res)=>{
-    const result =getProductById(req.params.id)
-    res.send(result)
-})
-
-app.post("/cities",(req,res)=>{
-    const newCity = new cityModel(req.body)
-    newCity.save()
-    res.send(newCity)
-})
-app.get("/cities",async(req,res)=>{
-    const cities = await cityModel.find({})
-    res.send(cities)
-})
-app.put("/cities/:id",async(req,res)=>{
-    const cities = await cityModel.findByIdAndUpdate(req.params.id,req.body )
-    res.send("city updated")
-})
-
-app.delete("/cities/:id",(req,res)=>{
-    const currentCity = cityModel.deleteOne({_id:req.params.id})
-    res.send("doct deleted")
+app.post("/users",async(req,res)=>{
+    // userdata = { name:"Ananta",email:"dssds",password:123456}
+    const newUser = new userModel(req.body)
+    newUser.save()
+    res.send(newUser)
 })
 
 
-//start app (server)
-app.listen(5000,()=>{console.log("server started")})
+app.listen(port,()=>{
+    console.log("server started at port :"+ port)
+})
