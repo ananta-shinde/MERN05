@@ -8,4 +8,13 @@ exports.userModel = mongoose.model("user",{
      password:String,
     })
 
-
+exports.isUserExist = async(email)=>{
+      const user = await this.userModel.findOne({email:email})
+     
+      if(user!= null)
+      {
+          return true
+      }else{
+          return false
+      }
+}

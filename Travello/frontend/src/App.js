@@ -8,8 +8,13 @@ import Hotels from './components/Hotels';
 import HotelListing from './components/HotelListing';
 import PostListing from './components/PostListing';
 import PostDetails from './components/PostDetails';
+import Signup from './components/Signup';
 
 const routers = createBrowserRouter([
+  {
+    path:"/signup",
+    element:<Signup/>
+  },
   {
     path:"/",
     element:<Home/>
