@@ -36,12 +36,29 @@ app.post("/users",async(req,res)=>{
     const newUser = new userModel(req.body)
     console.log(isUserExist(req.body.email))
     if(await isUserExist(req.body.email)){
-        res.send({message:"user already exist"})
+        res.status(208).send({status:208,message:"user already exist"})
     }else{
         newUser.save()
-        res.send(newUser)
+        res.status(201).send({status:201,_id :newUser._id})
     }
     
+})
+
+app.post("/users/signin",async(req,res)=>{
+        if(await isUserExist(req.body.email))
+        {
+           const user = await userModel.findOne({email:req.body.email})
+           if(user.password == req.body.password)
+           {
+              res.send({status:200,_id:user._id})
+           }
+           else{
+             res.send({status:403,message:"Invalid creds"})
+           }
+        }
+        else{
+            res.send({status:404,message:"User does not exists"})
+        }
 })
 
 

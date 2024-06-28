@@ -9,8 +9,13 @@ import HotelListing from './components/HotelListing';
 import PostListing from './components/PostListing';
 import PostDetails from './components/PostDetails';
 import Signup from './components/Signup';
+import SignIn from './components/SignIn';
 
 const routers = createBrowserRouter([
+  {
+    path:"/signin",
+    element:<SignIn/>
+  },
   {
     path:"/signup",
     element:<Signup/>

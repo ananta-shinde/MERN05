@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {useNavigate} from "react-router-dom"
-const Signup = () => {
-    const [name,setName] = useState("")
+const SignIn = () => {
+   
     const [email,setEamil] = useState("")
     const [password,setPassword] = useState("")
     const [error,setError] = useState("")
@@ -10,18 +10,21 @@ const Signup = () => {
 
     const handleSubmit = (event)=>{
          event.preventDefault()
-        if(name != "" && email != "" && password != "")
+        if( email != "" && password != "")
         {
-            fetch("http://localhost:5000/users",{
+            fetch("http://localhost:5000/users/signin",{
                 method:"post",
                 headers:{ "Content-Type":"application/json"},
-                body:JSON.stringify({name,email,password})
+                body:JSON.stringify({email,password})
             })
             .then(res=>res.json())
             .then(data=>{
-                if(data.status == 208)
+                if(data.status == 403)
                 {
-                    setError("User Already Exists")
+                    setError("Invalid Creds")
+                }
+                else if(data.status == 404){
+                    setError("User Not Found")
                 }
                 else{
                     setError("")
@@ -41,10 +44,9 @@ const Signup = () => {
                     <h5>Welcome User, Please create account</h5>
                     <form onSubmit={handleSubmit} className="bg-light shadow p-4">
                         {error != "" && <div className="alert alert-danger">{error}</div>}
-                        <input className="form-control" placeholder="Full name" name="name" onChange={(e)=>{setName(e.target.value)}}/>
                         <input className="form-control mt-3" placeholder="Email" name="email" onChange={(e)=>{setEamil(e.target.value)}}/>
-                        <input className="form-control mt-3" placeholder="Password" name="password" onChange={(e)=>{setPassword(e.target.value)}}/>
-                        <button className="btn btn-dark mt-3" type="submit">Create My Account</button>
+                        <input type="password" className="form-control mt-3" placeholder="Password" name="password" onChange={(e)=>{setPassword(e.target.value)}}/>
+                        <button className="btn btn-dark mt-3" type="submit">Sign IN</button>
                     </form> 
                 </div>
             </div>
@@ -52,4 +54,4 @@ const Signup = () => {
     );
 }
  
-export default Signup;
+export default SignIn;
