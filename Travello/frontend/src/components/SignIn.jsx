@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {useNavigate} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 const SignIn = () => {
    
     const [email,setEamil] = useState("")
@@ -28,7 +28,8 @@ const SignIn = () => {
                 }
                 else{
                     setError("")
-                    navigate("/")
+                    localStorage.setItem("user",JSON.stringify({_id:data._id,name:data.name}))
+                    navigate("/")    
                 }
             })
         }else{
@@ -48,6 +49,10 @@ const SignIn = () => {
                         <input type="password" className="form-control mt-3" placeholder="Password" name="password" onChange={(e)=>{setPassword(e.target.value)}}/>
                         <button className="btn btn-dark mt-3" type="submit">Sign IN</button>
                     </form> 
+
+                    <div>
+                        <Link to="/signup">Dont have account? create here</Link>
+                    </div>
                 </div>
             </div>
         </div>

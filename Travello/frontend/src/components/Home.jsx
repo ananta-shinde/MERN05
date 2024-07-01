@@ -1,10 +1,20 @@
 import { Link } from "react-router-dom";
+import AppMainNav from "./AppMainNav";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+    const [user,setUser] = useState(null)
+
+    useEffect(()=>{
+        setUser(JSON.parse(localStorage.getItem("user")))
+    },[])
     return ( <>
-         <h4>Home page</h4>
-         <Link to="/hotels">Book Hotels</Link>
-         <Link to="/cabs">Book Cab</Link>
+         <AppMainNav user={user} setUser={setUser}/>
+         <div className="container d-flex justify-content-center p-2">
+            <Link className="mega-menu bg-light p-2" to="/hotels">Hotels</Link>
+            <Link className="mega-menu bg-light p-2" to="/cabs">Cab</Link>
+         </div>
+         
     </> );
 }
  

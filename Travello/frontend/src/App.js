@@ -10,6 +10,7 @@ import PostListing from './components/PostListing';
 import PostDetails from './components/PostDetails';
 import Signup from './components/Signup';
 import SignIn from './components/SignIn';
+import AddNewHotel from './components/AddNewHotel';
 
 const routers = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const routers = createBrowserRouter([
   {
     path:"/hotels",
     element:<Hotels/>
+  },
+  {
+    path:"/hotels/add",
+    element:<AddNewHotel/>
   },
   {
     path:"/cabs",

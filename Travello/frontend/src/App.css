@@ -1,1 +1,5 @@
- 
+ .mega-menu{
+    min-width: 100px;
+    text-decoration: none;
+    color: black;
+ }

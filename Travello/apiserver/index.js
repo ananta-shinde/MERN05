@@ -39,7 +39,7 @@ app.post("/users",async(req,res)=>{
         res.status(208).send({status:208,message:"user already exist"})
     }else{
         newUser.save()
-        res.status(201).send({status:201,_id :newUser._id})
+        res.status(201).send({status:201,_id :newUser._id,name:user.name})
     }
     
 })
@@ -50,7 +50,7 @@ app.post("/users/signin",async(req,res)=>{
            const user = await userModel.findOne({email:req.body.email})
            if(user.password == req.body.password)
            {
-              res.send({status:200,_id:user._id})
+              res.send({status:200,_id:user._id,name:user.name})
            }
            else{
              res.send({status:403,message:"Invalid creds"})

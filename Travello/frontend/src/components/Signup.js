@@ -25,6 +25,7 @@ const Signup = () => {
                 }
                 else{
                     setError("")
+                    localStorage.setItem("user",JSON.stringify({_id:data._id,name:data.name}))
                     navigate("/")
                 }
             })
