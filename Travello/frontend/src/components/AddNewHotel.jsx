@@ -15,7 +15,7 @@ const AddNewHotel = () => {
                   </select>
                 </div>
                 <div className="col-5">
-                    <input type="file" multiple className="form-control" placeholder="Images"/>
+                    <input type="file"  className="form-control" name="file_upload" placeholder="Images"/>
                 </div>
             </div>
         </div>
