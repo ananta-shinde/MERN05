@@ -1,5 +1,5 @@
 const express = require("express")
-const { getCitiesList, createCity } = require("../controller/cities")
+const { getCitiesList, createCity, getHotelsListByCity } = require("../controller/cities")
 const { model } = require("mongoose")
 const citiesRoutes = express.Router()
 

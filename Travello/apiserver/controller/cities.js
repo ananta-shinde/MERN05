@@ -10,3 +10,4 @@ exports.createCity = async(req,res)=>{
     newCity.save()
     res.send({status:200,city:newCity})
 }
+

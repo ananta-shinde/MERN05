@@ -4,6 +4,7 @@ const cors = require("cors")
 const multer = require('multer');
 const userRoutes = require("./routes/users");
 const citiesRoutes = require("./routes/cities");
+const hotelsRoutes = require("./routes/hotels");
 
 const port  = 5000
 const app = express()
@@ -32,6 +33,7 @@ app.get("/",(req,res)=>{
 // get user's list
 app.use("/users",userRoutes)
 app.use("/cities",citiesRoutes)
+app.use("/hotels",hotelsRoutes)
 
 
 app.post("/demo/files",uploader.single('file_upload'),(req,res)=>{
